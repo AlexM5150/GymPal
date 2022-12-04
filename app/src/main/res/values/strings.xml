@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">moreFIT</string>
+    <string name="Signup">Signup</string>
+    <string name="Login">Login</string>
+    <string name="signUsername">Username</string>
+    <string name="signPassword">Password</string>
+    <string name="signRepassword">Retype Password</string>
+    <string name="signEmail">Email</string>
+    <string name="signPhone">Phone</string>
+    <string name="signMeUp">Sign me up!</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle"><u>Profile</u></string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Developer</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_help">Settings</string>
+    <string name="menu_food">Add Food</string>
+
+    <string name="change_pass">Change Password</string>
+    <string name="menu_logout">Logout</string>
+    <string name="action_search">Search</string>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "341371256512",
+    "project_id": "fitnessapp-1758e",
+    "storage_bucket": "fitnessapp-1758e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341371256512:android:07d576974f972520427725",
+        "android_client_info": {
+          "package_name": "com.example.gympal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341371256512-vlsaqfrj0ccuucvpiqcf65o72lg6gfen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNfUgcbE0X_wpSj6YWmUf9qKCSZ3mFSwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341371256512-vlsaqfrj0ccuucvpiqcf65o72lg6gfen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
