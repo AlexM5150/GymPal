@@ -58,7 +58,7 @@ public class Signup extends AppCompatActivity {
                 String emailaddress = email.getText().toString().trim();
                 int cell = phone.length();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                Intent toUserInfo = new Intent(context, com.example.project1.UserInfo.class);
+                Intent toUserInfo = new Intent(context, com.example.gympal.UserInfo.class);
 
 
                 boolean correct = true;

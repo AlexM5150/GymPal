@@ -21,8 +21,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.project1.databinding.ActivityNavigationBinding;
-import com.example.project1.ui.home.HomeFragment;
+import com.example.gympal.databinding.ActivityNavigationBinding;
+import com.example.gympal.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -125,14 +125,14 @@ public class Navigation extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        Intent profile = new Intent(getApplicationContext(), com.example.project1.Profile.class);
+        Intent profile = new Intent(getApplicationContext(), com.example.gympal.Profile.class);
         startActivity(profile);
     }
 
     public void logoutClick() {
         navigationView.getMenu().findItem(R.id.nav_logout).setOnMenuItemClickListener(menuItem -> {
             firebaseAuth.signOut();
-            Intent logout = new Intent(getApplicationContext(), com.example.project1.Login.class);
+            Intent logout = new Intent(getApplicationContext(), com.example.gympal.Login.class);
             finish();
             startActivity(logout);
             return true;
@@ -154,7 +154,7 @@ public class Navigation extends AppCompatActivity {
             case R.id.action_settings:
                 String selection = item.getTitle().toString();
                 if(selection.equals("Developer")) {
-                    Intent devInfo = new Intent(context, com.example.project1.DevInfo.class);
+                    Intent devInfo = new Intent(context, com.example.gympal.DevInfo.class);
                     startActivity(devInfo);
                     break;
                 }

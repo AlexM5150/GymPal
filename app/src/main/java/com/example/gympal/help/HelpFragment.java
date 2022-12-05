@@ -17,10 +17,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.project1.Navigation;
-import com.example.project1.R;
-import com.example.project1.UserInfo;
-import com.example.project1.databinding.FragmentHelpBinding;
+import com.example.gympal.Navigation;
+import com.example.gympal.R;
+import com.example.gympal.UserInfo;
+import com.example.gympal.databinding.FragmentHelpBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;

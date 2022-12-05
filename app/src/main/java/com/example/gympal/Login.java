@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
         // Sign up button leads to signup activity page
         btnSignup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent signUp = new Intent(context, com.example.project1.Signup.class);
+                Intent signUp = new Intent(context, com.example.gympal.Signup.class);
                 finish();
                 startActivity(signUp);
             }

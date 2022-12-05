@@ -19,11 +19,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.project1.HttpHandler;
-import com.example.project1.Navigation;
-import com.example.project1.R;
-import com.example.project1.UserProfile;
-import com.example.project1.databinding.FoodFragmentBinding;
+import com.example.gympal.HttpHandler;
+import com.example.gympal.Navigation;
+import com.example.gympal.R;
+import com.example.gympal.UserProfile;
+import com.example.gympal.databinding.FoodFragmentBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
