@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">moreFIT</string>
+    <string name="app_name">Gym Pal</string>
     <string name="Signup">Signup</string>
     <string name="Login">Login</string>
     <string name="signUsername">Username</string>
