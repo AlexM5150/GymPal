@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="m o r e f i t"
+            android:text="G y m  P a l"
             android:textSize="30dp"
             android:transitionName="logo_text"
             app:layout_constraintBottom_toTopOf="@+id/email"
