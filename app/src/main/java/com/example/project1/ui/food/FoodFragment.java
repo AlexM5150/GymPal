@@ -1,4 +1,4 @@
-package com.example.gympal.ui.food;
+package com.example.project1.ui.food;
 
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
@@ -21,11 +21,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.gympal.HttpHandler;
-import com.example.gympal.Navigation;
-import com.example.gympal.R;
-import com.example.gympal.UserProfile;
-import com.example.gympal.databinding.FoodFragmentBinding;
+import com.example.project1.HttpHandler;
+import com.example.project1.Navigation;
+import com.example.project1.R;
+import com.example.project1.UserProfile;
+import com.example.project1.databinding.FoodFragmentBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;

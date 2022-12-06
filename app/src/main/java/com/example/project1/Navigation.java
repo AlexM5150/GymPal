@@ -1,4 +1,4 @@
-package com.example.gympal;
+package com.example.project1;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.gympal.ui.home.HomeFragment;
+import com.example.project1.ui.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -26,7 +26,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gympal.databinding.ActivityNavigationBinding;
+import com.example.project1.databinding.ActivityNavigationBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -1,4 +1,4 @@
-package com.example.gympal;
+package com.example.project1;
 
 import org.junit.Test;
 

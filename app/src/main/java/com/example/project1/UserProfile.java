@@ -1,4 +1,4 @@
-package com.example.gympal;
+package com.example.project1;
 
 // This class is used to keep a recording of all data and use it to send
 public class UserProfile {

@@ -1,4 +1,4 @@
-package com.example.gympal.ui.home;
+package com.example.project1.ui.home;
 
 import android.graphics.Color;
 import android.graphics.LinearGradient;
@@ -14,9 +14,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.gympal.R;
-import com.example.gympal.UserProfile;
-import com.example.gympal.databinding.FragmentHomeBinding;
+import com.example.project1.R;
+import com.example.project1.UserProfile;
+import com.example.project1.databinding.FragmentHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

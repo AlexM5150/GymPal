@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gympal">
+    package="com.example.project1">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
-        <activity android:name="com.example.gympal.splash_screen"
+        <activity android:name="com.example.project1.splash_screen"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,18 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.gympal.Profile" />
+        <activity android:name="com.example.project1.Profile" />
         <activity
-            android:name="com.example.gympal.Navigation"
+            android:name="com.example.project1.Navigation"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.Project1.NoActionBar" />
-        <activity android:name="com.example.gympal.DevInfo"
+        <activity android:name="com.example.project1.DevInfo"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.example.gympal.UserInfo"
+        <activity android:name="com.example.project1.UserInfo"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.example.gympal.Signup"
+        <activity android:name="com.example.project1.Signup"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.example.gympal.Login"
+        <activity android:name="com.example.project1.Login"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
