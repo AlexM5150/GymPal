@@ -5,32 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".splash_screen"
-    android:background="@color/background"
+    android:background="@color/black"
     android:screenOrientation="portrait">
 
     <ImageView
         android:id="@+id/logodum"
-        android:layout_width="267dp"
-        android:layout_height="311dp"
-        android:src="@drawable/logo"
+        android:layout_width="221dp"
+        android:layout_height="255dp"
+        android:src="@drawable/logo_gympal"
         android:transitionName="logo_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
-
-    <TextView
-        android:id="@+id/logotext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="G y m  P a l"
-        android:textSize="52dp"
-        android:transitionName="logo_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logodum" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

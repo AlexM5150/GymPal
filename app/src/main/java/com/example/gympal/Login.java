@@ -52,7 +52,6 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.Password);
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
-        loginlogotext = findViewById(R.id.loginlogotext);
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         // This keeps the user logged in, checks to see if user is set to null, if not it will
@@ -65,17 +64,6 @@ public class Login extends AppCompatActivity {
             startActivity(login);
         }
 
-        // Logo Design
-        loginlogotext = findViewById(R.id.loginlogotext);
-        TextPaint paint = loginlogotext.getPaint();
-        float width = paint.measureText(loginlogotext.getText().toString());
-        Shader textShader = new LinearGradient(0, 0, width, loginlogotext.getTextSize(),
-                new int[]{
-                        Color.parseColor("#3DBDB0"),
-                        Color.parseColor("#04B5CE"),
-                }, null, Shader.TileMode.CLAMP);
-        loginlogotext.getPaint().setShader(textShader);
-        loginlogotext.setTextColor(Color.parseColor("#3DBDB0"));
 
 
         // Login button leads to welcome activity page

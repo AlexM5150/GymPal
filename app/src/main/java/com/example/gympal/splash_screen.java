@@ -22,7 +22,6 @@ import android.widget.TextView;
 public class splash_screen extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 3000;
-    TextView logotext;
     Animation topAnimation, botAnimation;
     ImageView logosplash;
 
@@ -34,23 +33,10 @@ public class splash_screen extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        // Color settings for the logo
-        logotext = findViewById(R.id.logotext);
-        TextPaint paint = logotext.getPaint();
-        float width = paint.measureText(logotext.getText().toString());
-        Shader textShader = new LinearGradient(0, 0, width, logotext.getTextSize(),
-                new int[]{
-                    Color.parseColor("#3DBDB0"),
-                    Color.parseColor("#04B5CE"),
-                }, null, Shader.TileMode.CLAMP);
-        logotext.getPaint().setShader(textShader);
-        logotext.setTextColor(Color.parseColor("#3DBDB0"));
-
         // Setting animations for logo and text
         logosplash = findViewById(R.id.logodum);
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         botAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
-        logotext.setAnimation(botAnimation);
         logosplash.setAnimation(botAnimation);
 
 
@@ -60,9 +46,8 @@ public class splash_screen extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(splash_screen.this, Login.class);
-                Pair[] pairs = new Pair[2];
+                Pair[] pairs = new Pair[1];
                 pairs[0] = new Pair<View, String>(logosplash, "logo_image");
-                pairs[1] = new Pair<View, String>(logotext, "logo_text");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation
                         (splash_screen.this, pairs);
                 finish();
