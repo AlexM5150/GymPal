@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.project1.ui.home.HomeFragment"
+        android:name="com.example.gympal.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <argument
@@ -26,13 +26,13 @@
 
     <fragment
         android:id="@+id/nav_help"
-        android:name="com.example.project1.ui.help.HelpFragment"
+        android:name="com.example.gympal.ui.help.HelpFragment"
         android:label="@string/menu_help"
         tools:layout="@layout/fragment_help" />
 
     <fragment
         android:id="@+id/nav_food"
-        android:name="com.example.project1.ui.food.FoodFragment"
+        android:name="com.example.gympal.ui.food.FoodFragment"
         android:label="@string/menu_food"
         tools:layout="@layout/food_fragment" >
         <action

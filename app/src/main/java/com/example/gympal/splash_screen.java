@@ -1,5 +1,7 @@
 package com.example.gympal;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -15,8 +17,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 // This class is used to create the splash screen animations
 public class splash_screen extends AppCompatActivity {

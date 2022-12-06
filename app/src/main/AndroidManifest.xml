@@ -12,8 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
-        <activity android:name=".splash_screen"
-            android:exported="true"
+        <activity android:name="com.example.gympal.splash_screen"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,25 +20,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Profile"
-            android:exported="true"/>
+        <activity android:name="com.example.gympal.Profile" />
         <activity
-            android:exported="true"
-            android:name=".Navigation"
+            android:name="com.example.gympal.Navigation"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.Project1.NoActionBar" />
-        <activity android:name=".UserInfo"
-            android:exported="true"
+        <activity android:name="com.example.gympal.DevInfo"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name=".Signup"
-            android:exported="true"
+        <activity android:name="com.example.gympal.UserInfo"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name=".Login"
-            android:exported="true"
+        <activity android:name="com.example.gympal.Signup"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.example.gympal.Login"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:exported="true"/>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
     </application>

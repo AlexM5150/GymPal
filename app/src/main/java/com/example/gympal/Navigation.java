@@ -8,28 +8,32 @@ import android.graphics.Shader;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextPaint;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+import com.example.gympal.ui.home.HomeFragment;
+import com.google.android.material.navigation.NavigationView;
+
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gympal.databinding.ActivityNavigationBinding;
-import com.example.gympal.home.HomeFragment;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 
 import org.jetbrains.annotations.NotNull;
 
@@ -125,14 +129,14 @@ public class Navigation extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        Intent profile = new Intent(getApplicationContext(), com.example.gympal.Profile.class);
+        Intent profile = new Intent(getApplicationContext(), Profile.class);
         startActivity(profile);
     }
 
     public void logoutClick() {
         navigationView.getMenu().findItem(R.id.nav_logout).setOnMenuItemClickListener(menuItem -> {
             firebaseAuth.signOut();
-            Intent logout = new Intent(getApplicationContext(), com.example.gympal.Login.class);
+            Intent logout = new Intent(getApplicationContext(), Login.class);
             finish();
             startActivity(logout);
             return true;
@@ -154,7 +158,7 @@ public class Navigation extends AppCompatActivity {
             case R.id.action_settings:
                 String selection = item.getTitle().toString();
                 if(selection.equals("Developer")) {
-                    Intent devInfo = new Intent(context, com.example.gympal.DevInfo.class);
+                    Intent devInfo = new Intent(context, DevInfo.class);
                     startActivity(devInfo);
                     break;
                 }

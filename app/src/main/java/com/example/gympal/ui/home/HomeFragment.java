@@ -1,4 +1,4 @@
-package com.example.gympal.home;
+package com.example.gympal.ui.home;
 
 import android.graphics.Color;
 import android.graphics.LinearGradient;

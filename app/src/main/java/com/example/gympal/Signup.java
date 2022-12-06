@@ -1,5 +1,8 @@
 package com.example.gympal;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -58,7 +58,7 @@ public class Signup extends AppCompatActivity {
                 String emailaddress = email.getText().toString().trim();
                 int cell = phone.length();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                Intent toUserInfo = new Intent(context, com.example.gympal.UserInfo.class);
+                Intent toUserInfo = new Intent(context, UserInfo.class);
 
 
                 boolean correct = true;
