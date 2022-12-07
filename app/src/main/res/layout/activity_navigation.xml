@@ -6,12 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    android:background="@color/background">
+    tools:openDrawer="start">
 
     <include
         android:id="@+id/app_bar_navigation"
-        layout="@layout/app_bar_navigation"
+        layout="@layout/activity_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -20,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/background"
+        android:background="#1F1F1F"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_navigation"
         app:menu="@menu/activity_navigation_drawer"
