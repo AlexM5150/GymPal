@@ -25,7 +25,7 @@ import com.example.project1.HttpHandler;
 import com.example.project1.Navigation;
 import com.example.project1.R;
 import com.example.project1.UserProfile;
-import com.example.project1.databinding.FoodFragmentBinding;
+import com.example.project1.databinding.FoodMenuBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -41,7 +41,7 @@ public class FoodFragment extends Fragment {
     private Toolbar toolbar;
     private String user;
     private SearchView sv;
-    private FoodFragmentBinding binding;
+    private FoodMenuBinding binding;
 
     private View root;
     private FirebaseAuth firebaseAuth;
@@ -71,7 +71,7 @@ public class FoodFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FoodFragmentBinding.inflate(inflater, container, false);
+        binding = FoodMenuBinding.inflate(inflater, container, false);
         root = binding.getRoot();
 
         foodNametxt = root.findViewById(R.id.recent_item);
