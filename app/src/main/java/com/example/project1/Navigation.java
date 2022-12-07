@@ -63,12 +63,13 @@ public class Navigation extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarNavigation.toolbar);
 
+        //create hamburger menu
         drawer = binding.drawerLayout;
         navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_help, R.id.nav_food, R.id.nav_logout)
+                R.id.drawer_home, R.id.drawer_help, R.id.drawer_food, R.id.drawer_logout)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = findNavController(this, R.id.nav_host_fragment_content_navigation);
@@ -134,7 +135,7 @@ public class Navigation extends AppCompatActivity {
     }
 
     public void logoutClick() {
-        navigationView.getMenu().findItem(R.id.nav_logout).setOnMenuItemClickListener(menuItem -> {
+        navigationView.getMenu().findItem(R.id.drawer_logout).setOnMenuItemClickListener(menuItem -> {
             firebaseAuth.signOut();
             Intent logout = new Intent(getApplicationContext(), Login.class);
             finish();
@@ -146,7 +147,7 @@ public class Navigation extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
+        getMenuInflater().inflate(R.menu.about, menu);
 
         return true;
     }
@@ -155,7 +156,7 @@ public class Navigation extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Context context = getApplicationContext();
         switch(item.getItemId()) {
-            case R.id.action_settings:
+            case R.id.action_about:
                 String selection = item.getTitle().toString();
                 if(selection.equals("Developer")) {
                     Intent devInfo = new Intent(context, DevInfo.class);

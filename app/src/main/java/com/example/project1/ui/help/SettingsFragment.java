@@ -5,6 +5,8 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,7 +22,7 @@ import androidx.fragment.app.Fragment;
 import com.example.project1.Navigation;
 import com.example.project1.R;
 import com.example.project1.UserInfo;
-import com.example.project1.databinding.FragmentHelpBinding;
+import com.example.project1.databinding.FragmentSettingsBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,15 +35,16 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class HelpFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
-    private FragmentHelpBinding binding;
+    private FragmentSettingsBinding binding;
     String imgSelected = "hold";
 
     // Popup
     private Dialog diag1;
     private Dialog diag2;
 
+    private View root;
 
     private Button popchangepic;
     private Button popchangepass;
@@ -87,8 +90,9 @@ public class HelpFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentHelpBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        root = binding.getRoot();
+        setHasOptionsMenu(true);
 
         editInfo = root.findViewById(R.id.editinfo_help);
         editInfo.setOnClickListener(new View.OnClickListener(){
@@ -114,18 +118,29 @@ public class HelpFragment extends Fragment {
         });
 
         return root;
+
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.findItem(R.id.action_about).setVisible(false);
+    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
+
     @Override
     public void onAttach(Context context){
         super.onAttach(context);
         context1 = context;
         context2 = context;
     }
+
     // Method for creating password change popup
     public void ShowPopup(View v){
         diag1.show();
@@ -231,4 +246,5 @@ public class HelpFragment extends Fragment {
             }
         });
     }
+
 }

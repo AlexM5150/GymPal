@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/drawer_home">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/drawer_home"
         android:name="com.example.project1.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
@@ -25,18 +25,18 @@
 
 
     <fragment
-        android:id="@+id/nav_help"
-        android:name="com.example.project1.ui.help.HelpFragment"
+        android:id="@+id/drawer_help"
+        android:name="com.example.project1.ui.help.SettingsFragment"
         android:label="@string/menu_help"
-        tools:layout="@layout/fragment_help" />
+        tools:layout="@layout/fragment_settings" />
 
     <fragment
-        android:id="@+id/nav_food"
+        android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
         android:label="@string/menu_food"
         tools:layout="@layout/food_menu" >
         <action
             android:id="@+id/action_nav_food_to_nav_home"
-            app:destination="@id/nav_home" />
+            app:destination="@id/drawer_home" />
     </fragment>
 </navigation>

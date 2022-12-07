@@ -8,7 +8,7 @@
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:background="@color/background"
-    tools:context=".ui.help.HelpFragment">
+    tools:context=".ui.help.SettingsFragment">
 
     <Button
         android:id="@+id/changepass_help"

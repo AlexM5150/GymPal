@@ -188,7 +188,6 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
                 gender, caloriesLeft, userAge, profilePic, foodName, calories, foodBrand, prevCalories);
         myRef.setValue(userProfile);
     }
-
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 

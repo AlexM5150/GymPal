@@ -154,7 +154,7 @@ public class FoodFragment extends Fragment {
         // Inflate the menu; this adds items to the action bar if it is present.
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.search, menu);
-        menu.findItem(R.id.action_settings).setVisible(false);
+        menu.findItem(R.id.action_about).setVisible(false);
         setHasOptionsMenu(true);
 
         sv = (SearchView) menu.findItem(R.id.action_search).getActionView();
