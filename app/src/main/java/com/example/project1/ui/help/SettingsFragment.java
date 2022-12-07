@@ -22,7 +22,7 @@ import androidx.fragment.app.Fragment;
 import com.example.project1.Navigation;
 import com.example.project1.R;
 import com.example.project1.UserInfo;
-import com.example.project1.databinding.FragmentSettingsBinding;
+import com.example.project1.databinding.ActivitySettingsBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,7 +37,7 @@ import java.util.ArrayList;
 
 public class SettingsFragment extends Fragment {
 
-    private FragmentSettingsBinding binding;
+    private ActivitySettingsBinding binding;
     String imgSelected = "hold";
 
     // Popup
@@ -90,7 +90,7 @@ public class SettingsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        binding = ActivitySettingsBinding.inflate(inflater, container, false);
         root = binding.getRoot();
         setHasOptionsMenu(true);
 

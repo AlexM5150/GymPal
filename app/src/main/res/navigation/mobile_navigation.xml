@@ -28,7 +28,7 @@
         android:id="@+id/drawer_help"
         android:name="com.example.project1.ui.help.SettingsFragment"
         android:label="@string/menu_help"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/activity_settings" />
 
     <fragment
         android:id="@+id/drawer_food"

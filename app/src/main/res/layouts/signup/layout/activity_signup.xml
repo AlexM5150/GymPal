@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Signup"
-    android:background="@color/background">
+    android:background="@color/black">
 
     <EditText
         android:id="@+id/signUsername"

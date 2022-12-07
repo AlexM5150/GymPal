@@ -190,7 +190,7 @@ public class FoodFragment extends Fragment {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowlayout,
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_rowlayout,
                     parent, false);
             return new ViewHolder(view);
         }
