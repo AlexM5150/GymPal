@@ -24,4 +24,6 @@
     <string name="change_pass">Change Password</string>
     <string name="menu_logout">Logout</string>
     <string name="action_search">Search</string>
+
+    <string name="disclaimer">By tapping "Create Account" or "Log In" you have agreed to our <u>TERMS &amp; CONDITIONS</u>. Click here to see how we use your data in <u>PRIVATE POLICY</u>.</string>
 </resources>

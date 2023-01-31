@@ -35,7 +35,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src\\main\\res', 'src\\main\\res\\layouts\\login', 'src\\main\\res\\layouts\\splash', 'src\\main\\res\\layouts\\home', 'src\\main\\res\\layouts\\food', 'src\\main\\res\\layouts\\settings', 'src\\main\\res\\layouts\\drawer', 'src\\main\\res\\layouts\\signup', 'src\\main\\res\\layouts\\profile', 'src\\main\\res\\layouts\\devInfo'
+                srcDirs 'src\\main\\res', 'src\\main\\res\\layouts\\login', 'src\\main\\res\\layouts\\splash', 'src\\main\\res\\layouts\\home', 'src\\main\\res\\layouts\\food', 'src\\main\\res\\layouts\\settings', 'src\\main\\res\\layouts\\drawer', 'src\\main\\res\\layouts\\signup', 'src\\main\\res\\layouts\\profile', 'src\\main\\res\\layouts\\devInfo', 'src\\main\\res\\layouts\\landing'
             }
         }
     }

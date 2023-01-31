@@ -40,7 +40,7 @@ public class splash_screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(splash_screen.this, Login.class);
+                Intent intent = new Intent(splash_screen.this, Landing.class);
                 Pair[] pairs = new Pair[1];
                 pairs[0] = new Pair<View, String>(logosplash, "logo_image");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation

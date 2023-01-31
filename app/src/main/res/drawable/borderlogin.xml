@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <padding
-        android:bottom="7dp"
-        android:left="7dp"
-        android:right="7dp"
-        android:top="7dp"/>
-    <corners android:radius="25dp"/>
-    <stroke android:width="4px" android:color="#DBD4D3"/>
-
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!--Minus (-) how much dp you gave in the stroke width from left right top-->
+<item android:left="-7dp" android:right="-7dp" android:bottom="-30dp">
+    <shape
+        android:shape="rectangle">
+        <stroke
+            android:width="3dp"
+            android:color="#DBD4D3" />
+        <!--This is the main background -->
+        <corners android:radius="25dp"/>
+    </shape>
+</item>
+</layer-list>

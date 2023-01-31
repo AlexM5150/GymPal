@@ -28,7 +28,6 @@ import org.jetbrains.annotations.NotNull;
 public class Login extends AppCompatActivity {
 
     private Button btnLogin;
-    private Button btnSignup;
     private EditText email;
     private EditText password;
     private FirebaseAuth firebaseAuth;
@@ -43,24 +42,21 @@ public class Login extends AppCompatActivity {
 
         context = getApplicationContext();
         btnLogin = findViewById(R.id.Login);
-        btnSignup = findViewById(R.id.Signup);
         email = findViewById(R.id.email);
         password = findViewById(R.id.Password);
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-        // This keeps the user logged in, checks to see if user is set to null, if not it will
-        if(user != null) {
-            Intent login = new Intent(context, Navigation.class);
-            user = firebaseAuth.getInstance().getCurrentUser();
-            String displayName = user.getDisplayName();
-            login.putExtra("displayName", displayName);
-            finish();
-            startActivity(login);
-        }
-
-
+//        // This keeps the user logged in, checks to see if user is set to null, if not it will
+//        if(user != null) {
+//            Intent login = new Intent(context, Navigation.class);
+//            user = firebaseAuth.getInstance().getCurrentUser();
+//            String displayName = user.getDisplayName();
+//            login.putExtra("displayName", displayName);
+//            finish();
+//            startActivity(login);
+//        }
 
         // Login button leads to welcome activity page
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -70,14 +66,6 @@ public class Login extends AppCompatActivity {
 
         });
 
-        // Sign up button leads to signup activity page
-        btnSignup.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent signUp = new Intent(context, Signup.class);
-                finish();
-                startActivity(signUp);
-            }
-        });
     }
 
     // Validation method will validate the username and password with the firebase authentication

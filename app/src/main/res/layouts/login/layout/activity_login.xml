@@ -21,7 +21,7 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/buttonstyle2"
+            android:background="@drawable/textborder"
             android:backgroundTint="@null"
             android:drawableLeft="@drawable/ic_mail"
             android:drawablePadding="5dp"
@@ -42,7 +42,7 @@
             android:id="@+id/Password"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/buttonstyle2"
+            android:background="@drawable/textborder"
             android:backgroundTint="@null"
             android:drawableLeft="@drawable/password_img"
             android:drawablePadding="7.5dp"
@@ -67,32 +67,17 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:background="@drawable/buttonstyle1"
-            app:backgroundTint="@null"
             android:text="@string/Login"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/Signup"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Password"
             app:layout_constraintVertical_bias="0.213" />
 
-        <Button
-            android:id="@+id/Signup"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Signup"
-            app:backgroundTint="@null"
-            android:background="@drawable/buttonstyle1"
-            app:cornerRadius="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.92"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@id/Login"
-            app:layout_constraintTop_toBottomOf="@+id/Password"
-            app:layout_constraintVertical_bias="0.213" />
+
 
         <ImageView
             android:id="@+id/dumbellLogo"
