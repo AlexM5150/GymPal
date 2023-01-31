@@ -48,16 +48,6 @@ public class Login extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-//        // This keeps the user logged in, checks to see if user is set to null, if not it will
-//        if(user != null) {
-//            Intent login = new Intent(context, Navigation.class);
-//            user = firebaseAuth.getInstance().getCurrentUser();
-//            String displayName = user.getDisplayName();
-//            login.putExtra("displayName", displayName);
-//            finish();
-//            startActivity(login);
-//        }
-
         // Login button leads to welcome activity page
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
