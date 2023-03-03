@@ -9,8 +9,11 @@ public class UserProfile {
     public String goalWeight;
     public String aLevel;
     public String gender;
+
+    public String style;
     public String caloriesLeft;
     public String age;
+    public String location;
     public String profilePic;
     public String currentFoodName;
     public String currentFoodCalories;
@@ -18,16 +21,18 @@ public class UserProfile {
     public String prevCalories;
 
     // Constructor method for all values of UserProfile
-    public UserProfile(String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String caloriesLeft, String age, String profilePic,
+    public UserProfile(String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String location, String profilePic,
                        String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories){
         this.feetNum = feetNum;
         this.inchNum = inchNum;
         this.curWeight = curWeight;
         this.aLevel = aLevel;
         this.gender = gender;
+        this.style = style;
         this.goalWeight = gWeight;
         this.caloriesLeft = caloriesLeft;
         this.age = age;
+        this.location = location;
         this.profilePic = profilePic;
         this.currentFoodName = currentFoodName;
         this.currentFoodCalories = currentFoodCalories;
@@ -60,6 +65,10 @@ public class UserProfile {
     public String  getAge(){ return age; }
 
     public void setAge(String age) { this.age = age;}
+
+    public String  getLocation(){ return location; }
+
+    public void setLocation(String location) { this.location = location;}
 
     public String getCaloriesLeft(){ return caloriesLeft;}
 
@@ -111,5 +120,13 @@ public class UserProfile {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
     }
 }

@@ -29,6 +29,8 @@ public class Profile extends AppCompatActivity {
     private TextView goalWeight;
     private TextView activityLevel;
     private TextView gender;
+    private TextView style;
+    private TextView location;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase userData;
     private Toolbar toolbar;
@@ -46,6 +48,8 @@ public class Profile extends AppCompatActivity {
         goalWeight = findViewById(R.id.profile_goal_weight);
         activityLevel = findViewById(R.id.profile_activity_level);
         gender = findViewById(R.id.profile_gender);
+        style = findViewById(R.id.profile_style);
+        location = findViewById(R.id.profile_location);
         toolbar = findViewById(R.id.profile_toolbar);
         profilepic = findViewById(R.id.profilePage_pic);
         setSupportActionBar(toolbar);
@@ -67,6 +71,8 @@ public class Profile extends AppCompatActivity {
                 goalWeight.setText(userProfile.getGoalWeight());
                 activityLevel.setText(userProfile.getaLevel());
                 gender.setText(userProfile.getGender());
+                style.setText(userProfile.getStyle());
+                location.setText(userProfile.getLocation());
                 profilepic.setImageURI(Uri.parse(userProfile.getProfilePic()));
 
             }

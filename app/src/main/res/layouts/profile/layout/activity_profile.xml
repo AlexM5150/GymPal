@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingRight="16dp"
@@ -15,6 +13,32 @@
         android:paddingTop="16dp"
         android:background="@color/background"
         tools:context=".Profile">
+
+        <TextView
+            android:id="@+id/profile_location"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/location_txt"
+            app:layout_constraintTop_toBottomOf="@+id/profile_style" />
+
+        <TextView
+            android:id="@+id/location_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:text="Location"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/style_txt" />
 
         <TextView
             android:id="@+id/profile_height"
@@ -158,6 +182,34 @@
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+        <TextView
+            android:id="@+id/style_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Lifting Style"
+            android:textColor="@color/white"
+            android:gravity="end"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+        <TextView
+            android:id="@+id/profile_style"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/style_txt"
+            app:layout_constraintTop_toBottomOf="@+id/profile_gender" />
+
 
         <TextView
             android:id="@+id/textView4"

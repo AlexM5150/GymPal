@@ -16,6 +16,64 @@
         tools:context=".UserInfo">
 
 
+        <EditText
+            android:id="@+id/location_input"
+            android:layout_width="97dp"
+            android:layout_height="36dp"
+            android:background="@drawable/textborder"
+            android:ems="10"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/finish_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/location_ask"
+            app:layout_constraintTop_toBottomOf="@+id/style_spin"
+            app:layout_constraintVertical_bias="0.498" />
+
+        <TextView
+            android:id="@+id/location_ask"
+            android:layout_width="94dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="128dp"
+            android:gravity="center"
+            android:text="Location:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/finish_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/style_spin"
+            app:layout_constraintVertical_bias="0.263" />
+
+        <TextView
+            android:id="@+id/activity_level_txt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Activity Level"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.653" />
+
+        <TextView
+            android:id="@+id/style_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Lifting Style"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.861" />
+
         <TextView
             android:id="@+id/gender_txt"
             android:layout_width="match_parent"
@@ -184,16 +242,15 @@
             android:id="@+id/finish_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:background="@drawable/buttonstyle1"
             android:text="FINISH"
             android:textColor="@android:color/white"
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/act_level"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Spinner
             android:id="@+id/gender_spin"
@@ -210,15 +267,16 @@
             android:id="@+id/age_ask"
             android:layout_width="94dp"
             android:layout_height="36dp"
-            android:layout_marginStart="92dp"
+            android:layout_marginStart="112dp"
             android:gravity="center"
             android:text="Age:"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/finish_user"
+            app:layout_constraintBottom_toTopOf="@+id/style_txt"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/act_level"
-            app:layout_constraintVertical_bias="0.477" />
+            app:layout_constraintVertical_bias="0.501" />
+
 
         <EditText
             android:id="@+id/age_input"
@@ -229,11 +287,22 @@
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/finish_user"
+            app:layout_constraintBottom_toTopOf="@+id/style_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/age_ask"
             app:layout_constraintTop_toBottomOf="@+id/act_level"
-            app:layout_constraintVertical_bias="0.476" />
+            app:layout_constraintVertical_bias="0.501" />
+
+        <Spinner
+            android:id="@+id/style_spin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textborder"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/location_ask"
+            app:layout_constraintTop_toBottomOf="@id/style_txt"
+            app:layout_constraintVertical_bias="0.131"
+            tools:layout_editor_absoluteX="-7dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

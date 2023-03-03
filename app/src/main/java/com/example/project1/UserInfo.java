@@ -28,6 +28,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
 
     String[] gen = {"Male", "Female"};
     String[] act_lvl = {"Low", "Moderate", "High"};
+    String[] styles = {"Casual", "BodyBuilding", "Powerlifting"};
     private Button finished;
     private Context context;
     private EditText feet;
@@ -36,6 +37,8 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     private Slider goalweight;
     private EditText age;
 
+    private EditText location;
+
     String profilePic = "nice";
     String feetNum;
     String inchNum;
@@ -43,7 +46,9 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     String gWeight;
     String aLevel;
     String gender;
+    String style;
     String userAge;
+    String userLocation;
     String caloriesLeft;
     String calories;
     String prevCalories;
@@ -67,19 +72,27 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         currentweight = findViewById(R.id.current_weight_slider);
         goalweight = findViewById(R.id.goal_weight_slider);
         age = findViewById(R.id.age_input);
+        location = findViewById(R.id.location_input);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
 
 
 
-        // Spinner creation for activity level and gender
+        // Spinner creation for activity level and gender and lifting style
         Spinner actspin = findViewById(R.id.act_level);
         actspin.setOnItemSelectedListener(this);
         ArrayAdapter<String> levels = new ArrayAdapter<>(this, android.R.layout.
                 simple_spinner_dropdown_item, act_lvl);
         levels.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         actspin.setAdapter(levels);
+
+        Spinner stylespin = findViewById(R.id.style_spin);
+        stylespin.setOnItemSelectedListener(this);
+        ArrayAdapter<String> liftingSyles = new ArrayAdapter<>(this, android.R.layout.
+                simple_spinner_dropdown_item, styles);
+        levels.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        stylespin.setAdapter(liftingSyles);
 
         Spinner genderspin = findViewById(R.id.gender_spin);
         actspin.setOnItemSelectedListener(this);
@@ -88,7 +101,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         levels.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genderspin.setAdapter(genders);
 
-        // Spinner text settings for activity level and gender
+        // Spinner text settings for activity level and gender and lifting style
         actspin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
@@ -100,6 +113,16 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         });
 
         genderspin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
+                ((TextView) view).setTextColor(Color.WHITE);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent){
+            }
+        });
+
+        stylespin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
                 ((TextView) view).setTextColor(Color.WHITE);
@@ -122,7 +145,9 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
                 gWeight = String.valueOf(goalweight.getValue());
                 aLevel = actspin.getSelectedItem().toString();
                 gender = genderspin.getSelectedItem().toString();
+                style = stylespin.getSelectedItem().toString();
                 userAge = age.getText().toString();
+                userLocation = location.getText().toString();
                 profilePic = "android.resource://com.example.project1/2131165272";
                 foodName = "0";
                 foodBrand = "0";
@@ -185,7 +210,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(feetNum, inchNum, curWeight, gWeight ,aLevel,
-                gender, caloriesLeft, userAge, profilePic, foodName, calories, foodBrand, prevCalories);
+                gender, style, caloriesLeft, userAge, userLocation, profilePic, foodName, calories, foodBrand, prevCalories);
         myRef.setValue(userProfile);
     }
     @Override
