@@ -40,6 +40,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     private EditText location;
 
     String profilePic = "nice";
+    String displayName;
     String feetNum;
     String inchNum;
     String curWeight;
@@ -66,6 +67,8 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
+        FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
+        displayName = user.getDisplayName();
 
         feet = findViewById(R.id.feet);
         inches = findViewById(R.id.inches);
@@ -192,8 +195,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
                 else{
                     sendUserData();
                     Intent done = new Intent(context, Navigation.class);
-                    FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
-                    String displayName = user.getDisplayName();
+
                     done.putExtra("displayName", displayName);
                     finish();
                     startActivity(done);
@@ -209,7 +211,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     private void sendUserData() {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
-        UserProfile userProfile = new UserProfile(feetNum, inchNum, curWeight, gWeight ,aLevel,
+        UserProfile userProfile = new UserProfile(displayName, feetNum, inchNum, curWeight, gWeight ,aLevel,
                 gender, style, caloriesLeft, userAge, userLocation, profilePic, foodName, calories, foodBrand, prevCalories);
         myRef.setValue(userProfile);
     }

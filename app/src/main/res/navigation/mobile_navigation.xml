@@ -33,8 +33,7 @@
     <fragment
         android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
-        android:label="@string/menu_food"
-        tools:layout="@layout/food_menu" >
+        android:label="@string/menu_food">
         <action
             android:id="@+id/action_nav_food_to_nav_home"
             app:destination="@id/drawer_home" />
