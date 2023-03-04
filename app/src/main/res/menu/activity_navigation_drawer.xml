@@ -17,6 +17,15 @@
             android:icon="@drawable/ic_help"
             android:title="@string/menu_help" />
         <item
+            android:id="@+id/drawer_weight"
+            android:icon="@drawable/ic_help"
+            android:title="@string/menu_weight" />
+        <item
+            android:id="@+id/drawer_gymMap"
+            android:icon="@drawable/ic_help"
+            android:title="@string/menu_findGym"
+            />
+        <item
             android:id="@+id/drawer_logout"
             android:icon="@drawable/ic_logout"
             android:title="@string/menu_logout"/>
