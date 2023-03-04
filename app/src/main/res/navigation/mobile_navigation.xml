@@ -31,18 +31,6 @@
         tools:layout="@layout/activity_settings" />
 
     <fragment
-        android:id="@+id/drawer_weight"
-        android:name="com.example.project1.ui.weight.WeightFragment"
-        android:label="@string/menu_weight"
-        tools:layout="@layout/fragment_weight" />
-
-    <fragment
-        android:id="@+id/drawer_gymMap"
-        android:name="com.example.project1.ui.gymMap.MapFragment"
-        android:label="@string/menu_findGym"
-        tools:layout="@layout/fragment_map" />
-
-    <fragment
         android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
         android:label="@string/menu_food">
