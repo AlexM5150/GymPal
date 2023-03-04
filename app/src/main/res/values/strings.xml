@@ -20,6 +20,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_help">Settings</string>
     <string name="menu_food">Add Food</string>
+    <string name="menu_weight">Weight Tracker</string>
+    <string name="menu_findGym">Find a Gym</string>
 
     <string name="change_pass">Change Password</string>
     <string name="menu_logout">Logout</string>
