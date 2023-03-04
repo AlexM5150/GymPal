@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
-        <activity android:name="com.example.project1.splash_screen"
+        <activity
+            android:name=".GoogleSignUp"
+            android:exported="false" />
+        <activity
+            android:name=".splash_screen"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,25 +24,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.project1.Profile" />
+        <activity android:name=".Profile" />
         <activity
-            android:name="com.example.project1.Navigation"
+            android:name=".Navigation"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.Project1.NoActionBar" />
-        <activity android:name="com.example.project1.DevInfo"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.example.project1.UserInfo"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.example.project1.Signup"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.example.project1.Login"
+        <activity
+            android:name=".DevInfo"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".UserInfo"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Signup"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".Login"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.project1.Landing"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name=".Landing"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
     </application>
 
 </manifest>
