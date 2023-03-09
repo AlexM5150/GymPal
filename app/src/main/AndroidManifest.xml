@@ -12,8 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
+        <activity
+            android:name="com.example.project1.GoogleSignUp"
+            android:exported="false" />
         <activity android:name="com.example.project1.splash_screen"
-            android:configChanges="keyboardHidden|orientation|screenSize">
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +36,8 @@
         <activity android:name="com.example.project1.Signup"
             android:configChanges="keyboardHidden|orientation|screenSize"/>
         <activity android:name="com.example.project1.Login"
-            android:configChanges="keyboardHidden|orientation|screenSize">
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

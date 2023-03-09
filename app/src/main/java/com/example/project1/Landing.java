@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Landing extends AppCompatActivity {
     private Button btnCreateAcc;
     private Button btnLogin;
+    private Button btnGoogleLogin;
     private FirebaseAuth firebaseAuth;
     private Context context;
     private EditText email;
@@ -32,6 +33,7 @@ public class Landing extends AppCompatActivity {
         context = getApplicationContext();
         btnLogin = findViewById(R.id.Landing_login);
         btnCreateAcc = findViewById(R.id.Signup);
+        btnGoogleLogin = findViewById(R.id.Google_login); // Google Login Method
         email = findViewById(R.id.email);
         password = findViewById(R.id.Password);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -54,7 +56,6 @@ public class Landing extends AppCompatActivity {
                 finish();
                 startActivity(Login);
             }
-
         });
 
         btnCreateAcc.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +66,12 @@ public class Landing extends AppCompatActivity {
             }
         });
 
-
+        btnGoogleLogin.setOnClickListener(new View.OnClickListener() { // Google Login Button
+            public void onClick(View v) {
+                Intent GoogleLogin = new Intent(context, GoogleSignUp.class);
+                finish();
+                startActivity(GoogleLogin); // Moves to the Google Sign Up Activity
+            }
+        });
     }
 }
