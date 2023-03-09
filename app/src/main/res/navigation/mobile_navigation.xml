@@ -23,6 +23,11 @@
             android:defaultValue="default" />
     </fragment>
 
+    <fragment
+        android:id="@+id/drawer_search"
+        android:name="com.example.project1.ui.search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/activity_search" />
 
     <fragment
         android:id="@+id/drawer_help"

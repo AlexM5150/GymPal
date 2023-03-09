@@ -21,6 +21,8 @@ public class UserProfile {
     public String currentBrandName;
     public String prevCalories;
 
+    public UserProfile(){}
+
     // Constructor method for all values of UserProfile
     public UserProfile(String displayName, String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String location, String profilePic,
                        String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories){
@@ -42,12 +44,11 @@ public class UserProfile {
         this.currentBrandName = currentBrandName;
         this.prevCalories = prevCalories;
     }
-    public UserProfile(){}
 
     // Below is all of the get and set methods, created if needed
-    public String getDisplayName(){return this.displayName;}
+    public String getDisplayName(){return displayName;}
 
-    public void setDisplayName(){this.displayName = displayName;}
+    public void setDisplayName(String displayName){this.displayName = displayName;}
 
     public String getPrevCalories(){return this.prevCalories; }
 

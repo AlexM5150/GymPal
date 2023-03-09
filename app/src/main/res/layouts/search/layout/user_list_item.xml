@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/user_list_item_profile_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/batman" />
+
+    <TextView
+        android:id="@+id/user_list_item_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@+id/user_list_item_profile_pic"
+        android:text="displayName" />
+
+    <TextView
+        android:id="@+id/user_list_item_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_list_item_display_name"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/user_list_item_profile_pic"
+        android:text="Location" />
+</RelativeLayout>
