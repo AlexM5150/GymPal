@@ -17,6 +17,10 @@
             android:icon="@drawable/ic_food"
             android:title="@string/menu_food" />
         <item
+            android:id="@+id/drawer_stats"
+            android:icon="@drawable/ic_launcher_gympal"
+            android:title="@string/menu_stats" />
+        <item
             android:id="@+id/drawer_help"
             android:icon="@drawable/ic_help"
             android:title="@string/menu_help" />

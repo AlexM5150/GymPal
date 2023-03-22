@@ -36,6 +36,12 @@
         tools:layout="@layout/activity_settings" />
 
     <fragment
+        android:id="@+id/drawer_stats"
+        android:name="com.example.project1.ui.stats.StatsFragment"
+        android:label="@string/menu_stats"
+        tools:layout="@layout/fragment_stats" />
+
+    <fragment
         android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
         android:label="@string/menu_food">

@@ -20,14 +20,19 @@ public class UserProfile {
     public String currentFoodCalories;
     public String currentBrandName;
     public String prevCalories;
+    public String squatNum;
+    public String benchNum;
+    public String deadliftNum;
 
     public UserProfile(){}
 
     // Constructor method for all values of UserProfile
+
     public UserProfile(String displayName, String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String location, String profilePic,
-                       String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories){
+                       String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories, String squatNum, String benchNum, String deadliftNum){
 
         this.displayName = displayName;
+
         this.feetNum = feetNum;
         this.inchNum = inchNum;
         this.curWeight = curWeight;
@@ -43,6 +48,9 @@ public class UserProfile {
         this.currentFoodCalories = currentFoodCalories;
         this.currentBrandName = currentBrandName;
         this.prevCalories = prevCalories;
+        this.squatNum = squatNum;
+        this.benchNum = benchNum;
+        this.deadliftNum = deadliftNum;
     }
 
     // Below is all of the get and set methods, created if needed
@@ -136,5 +144,29 @@ public class UserProfile {
 
     public void setStyle(String style) {
         this.style = style;
+    }
+
+    public String getSquatNum() {
+        return squatNum;
+    }
+
+    public void setSquatNum(String squatNum) {
+        this.squatNum = squatNum;
+    }
+
+    public String getBenchNum() {
+        return benchNum;
+    }
+
+    public void setBenchNum(String benchNum) {
+        this.benchNum = benchNum;
+    }
+
+    public String getDeadliftNum() {
+        return deadliftNum;
+    }
+
+    public void setDeadliftNum(String deadliftNum) {
+        this.deadliftNum = deadliftNum;
     }
 }

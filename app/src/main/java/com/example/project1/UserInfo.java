@@ -212,7 +212,8 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(displayName, feetNum, inchNum, curWeight, gWeight ,aLevel,
-                gender, style, caloriesLeft, userAge, userLocation, profilePic, foodName, calories, foodBrand, prevCalories);
+                gender, style, caloriesLeft, userAge, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "");
+
         myRef.setValue(userProfile);
     }
     @Override

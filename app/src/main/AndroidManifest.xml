@@ -15,6 +15,12 @@
         <activity
             android:name="com.example.project1.GoogleSignUp"
             android:exported="false" />
+        <activity
+            android:name=".viewStats"
+            android:exported="false" />
+        <activity
+            android:name=".updateStats"
+            android:exported="false" />
         <activity android:name="com.example.project1.splash_screen"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true">
@@ -42,8 +48,9 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.project1.Landing"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name="com.example.project1.Landing"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
     </application>
 
 </manifest>
