@@ -42,6 +42,12 @@
         tools:layout="@layout/fragment_stats" />
 
     <fragment
+        android:id="@+id/drawer_goals"
+        android:name="com.example.project1.ui.goals.GoalsFragment"
+        android:label="@string/menu_goals"
+        tools:layout="@layout/fragment_stats" />
+
+    <fragment
         android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
         android:label="@string/menu_food">

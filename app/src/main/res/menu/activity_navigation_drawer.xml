@@ -21,6 +21,10 @@
             android:icon="@drawable/ic_launcher_gympal"
             android:title="@string/menu_stats" />
         <item
+            android:id="@+id/drawer_goals"
+            android:icon="@android:drawable/checkbox_on_background"
+            android:title="@string/menu_goals" />
+        <item
             android:id="@+id/drawer_help"
             android:icon="@drawable/ic_help"
             android:title="@string/menu_help" />

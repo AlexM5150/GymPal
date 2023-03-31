@@ -36,6 +36,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     private Slider currentweight;
     private Slider goalweight;
     private EditText age;
+    private EditText bio;
 
     private EditText location;
 
@@ -49,6 +50,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     String gender;
     String style;
     String userAge;
+    String userBio;
     String userLocation;
     String caloriesLeft;
     String calories;
@@ -75,6 +77,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         currentweight = findViewById(R.id.current_weight_slider);
         goalweight = findViewById(R.id.goal_weight_slider);
         age = findViewById(R.id.age_input);
+        bio = findViewById(R.id.bio_input);
         location = findViewById(R.id.location_input);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -150,6 +153,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
                 gender = genderspin.getSelectedItem().toString();
                 style = stylespin.getSelectedItem().toString();
                 userAge = age.getText().toString();
+                userBio = bio.getText().toString();
                 userLocation = location.getText().toString();
                 profilePic = "android.resource://com.example.project1/2131165272";
                 foodName = "0";
@@ -212,7 +216,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(displayName, feetNum, inchNum, curWeight, gWeight ,aLevel,
-                gender, style, caloriesLeft, userAge, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "");
+                gender, style, caloriesLeft, userAge, userBio, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "");
 
         myRef.setValue(userProfile);
     }

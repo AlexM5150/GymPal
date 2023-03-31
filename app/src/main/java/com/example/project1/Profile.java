@@ -25,12 +25,15 @@ import org.jetbrains.annotations.NotNull;
 public class Profile extends AppCompatActivity {
 
     private TextView height;
-    private TextView currentWeight;
-    private TextView goalWeight;
+    //private TextView currentWeight;
+    //private TextView goalWeight;
     private TextView activityLevel;
     private TextView gender;
     private TextView style;
     private TextView location;
+    private TextView age;
+    private TextView bio;
+    private TextView name;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase userData;
     private Toolbar toolbar;
@@ -44,9 +47,12 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         height = findViewById(R.id.profile_height);
-        currentWeight = findViewById(R.id.profile_current_weight);
-        goalWeight = findViewById(R.id.profile_goal_weight);
+        //currentWeight = findViewById(R.id.profile_current_weight);
+        //goalWeight = findViewById(R.id.profile_goal_weight);
         activityLevel = findViewById(R.id.profile_activity_level);
+        age = findViewById(R.id.profile_age);
+        bio = findViewById(R.id.profile_bio);
+        name = findViewById(R.id.profile_name);
         gender = findViewById(R.id.profile_gender);
         style = findViewById(R.id.profile_style);
         location = findViewById(R.id.profile_location);
@@ -67,9 +73,12 @@ public class Profile extends AppCompatActivity {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 UserProfile userProfile = snapshot.getValue(UserProfile.class);
                 height.setText(userProfile.getFeetNum() + "'" + userProfile.getInchNum());
-                currentWeight.setText(userProfile.getCurWeight());
-                goalWeight.setText(userProfile.getGoalWeight());
+                //currentWeight.setText(userProfile.getCurWeight());
+                //goalWeight.setText(userProfile.getGoalWeight());
                 activityLevel.setText(userProfile.getaLevel());
+                age.setText(userProfile.getAge());
+                bio.setText(userProfile.getBio());
+                name.setText(userProfile.getDisplayName());
                 gender.setText(userProfile.getGender());
                 style.setText(userProfile.getStyle());
                 location.setText(userProfile.getLocation());
