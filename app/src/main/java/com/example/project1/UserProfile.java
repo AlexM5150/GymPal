@@ -1,5 +1,8 @@
 package com.example.project1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // This class is used to keep a recording of all data and use it to send
 public class UserProfile {
 
@@ -24,13 +27,13 @@ public class UserProfile {
     public String squatNum;
     public String benchNum;
     public String deadliftNum;
+    public List<String> goalList;
 
     public UserProfile(){}
 
     // Constructor method for all values of UserProfile
-
     public UserProfile(String displayName, String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String bio, String location, String profilePic,
-                       String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories, String squatNum, String benchNum, String deadliftNum){
+                       String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories, String squatNum, String benchNum, String deadliftNum, List<String> goalList){
 
         this.displayName = displayName;
 
@@ -53,6 +56,7 @@ public class UserProfile {
         this.squatNum = squatNum;
         this.benchNum = benchNum;
         this.deadliftNum = deadliftNum;
+        this.goalList = goalList;
     }
 
     // Below is all of the get and set methods, created if needed
@@ -175,4 +179,8 @@ public class UserProfile {
     public void setDeadliftNum(String deadliftNum) {
         this.deadliftNum = deadliftNum;
     }
+
+    public List<String> getGoalList() {return goalList;}
+
+    public void setGoalList(List<String> goalList) {this.goalList = goalList;}
 }

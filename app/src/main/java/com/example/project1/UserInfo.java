@@ -22,6 +22,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // This class represents the user info input page, it will take all the values of the user and input
 // the data into the real time firebase data
 public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -57,6 +60,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     String prevCalories;
     String foodName;
     String foodBrand;
+    List<String> goalList;
     int caloriesLeftNum;
     double height;
     double kgWeight;
@@ -216,7 +220,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(displayName, feetNum, inchNum, curWeight, gWeight ,aLevel,
-                gender, style, caloriesLeft, userAge, userBio, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "");
+                gender, style, caloriesLeft, userAge, userBio, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "", goalList);
 
         myRef.setValue(userProfile);
     }
