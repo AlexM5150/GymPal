@@ -25,6 +25,10 @@
             android:icon="@android:drawable/checkbox_on_background"
             android:title="@string/menu_goals" />
         <item
+            android:id="@+id/drawer_exercises"
+            android:icon="@android:drawable/ic_menu_week"
+            android:title="@string/menu_exercise" />
+        <item
             android:id="@+id/drawer_help"
             android:icon="@drawable/ic_help"
             android:title="@string/menu_help" />

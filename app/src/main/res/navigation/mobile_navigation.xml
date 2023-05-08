@@ -48,6 +48,12 @@
         tools:layout="@layout/fragment_stats" />
 
     <fragment
+        android:id="@+id/drawer_exercises"
+        android:name="com.example.project1.ui.exercises.exerciseFragment"
+        android:label="@string/menu_exercise"
+        tools:layout="@layout/fragment_exercise" />
+
+    <fragment
         android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
         android:label="@string/menu_food">

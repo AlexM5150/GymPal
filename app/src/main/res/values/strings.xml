@@ -34,4 +34,5 @@
     <string name="stats_title">Enter Your Lifting PRs (lbs)</string>
     <string name="bench_press">Bench Press:</string>
     <string name="deadlift">DeadLift:</string>
+    <string name="menu_exercise">Exercise Planner</string>
 </resources>
