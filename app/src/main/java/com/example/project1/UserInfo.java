@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project1.ui.home.HomeFragment;
 import com.google.android.material.slider.Slider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -167,7 +168,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
                 calories = "0";
                 prevCalories = "0";
 
-                // Setting the necessary values for the total calories the user needs left for the day
+//                 Setting the necessary values for the total calories the user needs left for the day
                 height = (Integer.parseInt(feetNum)*30.48) + (Integer.parseInt(inchNum)*2.54);
                 kgWeight = (Double.parseDouble(curWeight)*0.453592);
                 if(gender == "Male") {
