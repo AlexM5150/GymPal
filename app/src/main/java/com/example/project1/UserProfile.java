@@ -1,5 +1,8 @@
 package com.example.project1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // This class is used to keep a recording of all data and use it to send
 public class UserProfile {
 
@@ -14,6 +17,7 @@ public class UserProfile {
     public String style;
     public String caloriesLeft;
     public String age;
+    public String bio;
     public String location;
     public String profilePic;
     public String currentFoodName;
@@ -23,13 +27,13 @@ public class UserProfile {
     public String squatNum;
     public String benchNum;
     public String deadliftNum;
+    public List<String> goalList;
 
     public UserProfile(){}
 
     // Constructor method for all values of UserProfile
-
-    public UserProfile(String displayName, String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String location, String profilePic,
-                       String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories, String squatNum, String benchNum, String deadliftNum){
+    public UserProfile(String displayName, String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String bio, String location, String profilePic,
+                       String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories, String squatNum, String benchNum, String deadliftNum, List<String> goalList){
 
         this.displayName = displayName;
 
@@ -42,6 +46,7 @@ public class UserProfile {
         this.goalWeight = gWeight;
         this.caloriesLeft = caloriesLeft;
         this.age = age;
+        this.bio = bio;
         this.location = location;
         this.profilePic = profilePic;
         this.currentFoodName = currentFoodName;
@@ -51,6 +56,7 @@ public class UserProfile {
         this.squatNum = squatNum;
         this.benchNum = benchNum;
         this.deadliftNum = deadliftNum;
+        this.goalList = goalList;
     }
 
     // Below is all of the get and set methods, created if needed
@@ -81,6 +87,10 @@ public class UserProfile {
     public String  getAge(){ return age; }
 
     public void setAge(String age) { this.age = age;}
+
+    public String  getBio(){ return bio; }
+
+    public void setBio(String bio) { this.bio = bio;}
 
     public String  getLocation(){ return location; }
 
@@ -169,4 +179,8 @@ public class UserProfile {
     public void setDeadliftNum(String deadliftNum) {
         this.deadliftNum = deadliftNum;
     }
+
+    public List<String> getGoalList() {return goalList;}
+
+    public void setGoalList(List<String> goalList) {this.goalList = goalList;}
 }

@@ -22,6 +22,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // This class represents the user info input page, it will take all the values of the user and input
 // the data into the real time firebase data
 public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -36,6 +39,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     private Slider currentweight;
     private Slider goalweight;
     private EditText age;
+    private EditText bio;
 
     private EditText location;
 
@@ -49,12 +53,14 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     String gender;
     String style;
     String userAge;
+    String userBio;
     String userLocation;
     String caloriesLeft;
     String calories;
     String prevCalories;
     String foodName;
     String foodBrand;
+    List<String> goalList;
     int caloriesLeftNum;
     double height;
     double kgWeight;
@@ -75,6 +81,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         currentweight = findViewById(R.id.current_weight_slider);
         goalweight = findViewById(R.id.goal_weight_slider);
         age = findViewById(R.id.age_input);
+        bio = findViewById(R.id.bio_input);
         location = findViewById(R.id.location_input);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -150,6 +157,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
                 gender = genderspin.getSelectedItem().toString();
                 style = stylespin.getSelectedItem().toString();
                 userAge = age.getText().toString();
+                userBio = bio.getText().toString();
                 userLocation = location.getText().toString();
                 profilePic = "android.resource://com.example.project1/2131165272";
                 foodName = "0";
@@ -212,7 +220,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(displayName, feetNum, inchNum, curWeight, gWeight ,aLevel,
-                gender, style, caloriesLeft, userAge, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "");
+                gender, style, caloriesLeft, userAge, userBio, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "", goalList);
 
         myRef.setValue(userProfile);
     }
