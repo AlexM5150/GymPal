@@ -42,6 +42,18 @@
         tools:layout="@layout/fragment_stats" />
 
     <fragment
+        android:id="@+id/drawer_contact"
+        android:name="com.example.project1.ui.contact.GroupChat"
+        android:label="Gym Chat"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/drawer_water"
+        android:name="com.example.project1.ui.water.WaterFragment"
+        android:label="Water Tracker"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
         android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
         android:label="@string/menu_food">

@@ -24,6 +24,15 @@
             android:id="@+id/drawer_help"
             android:icon="@drawable/ic_help"
             android:title="@string/menu_help" />
+
+        <item
+            android:id="@+id/drawer_contact"
+            android:icon="@drawable/ic_chat"
+            android:title="Gym Chat" />
+        <item
+            android:id="@+id/drawer_water"
+            android:icon="@drawable/ic_water"
+            android:title="Water Tracker" />
         <item
             android:id="@+id/drawer_logout"
             android:icon="@drawable/ic_logout"
