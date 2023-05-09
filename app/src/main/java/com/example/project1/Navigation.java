@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.project1.ui.home.HomeFragment;
+import com.example.project1.ui.calories.CaloriesFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -87,46 +87,7 @@ public class Navigation extends AppCompatActivity {
         profilepic = headerView.findViewById(R.id.navProfilePic);
 
 
-        userData = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = userData.getReference(firebaseAuth.getUid());
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                UserProfile userProfile = snapshot.getValue(UserProfile.class);
-                profilepic.setImageURI(Uri.parse(userProfile.getProfilePic()));
-                HomeFragment.calorieDisplay.setText(String.valueOf(Math.abs(Integer.parseInt(userProfile.getCaloriesLeft()))));
 
-                if(Integer.parseInt(userProfile.getCaloriesLeft()) < 0) {
-                    TextPaint paint = HomeFragment.calorieDisplay.getPaint();
-                    float width = paint.measureText(HomeFragment.calorieDisplay.getText().toString());
-                    Shader textShader = new LinearGradient(0, 0, width, HomeFragment.calorieDisplay.getTextSize(),
-                            new int[]{
-                                    Color.parseColor("#FF0000"),
-                                    Color.parseColor("#FFD79C"),
-                            }, null, Shader.TileMode.CLAMP);
-                    HomeFragment.calorieDisplay.getPaint().setShader(textShader);
-                    HomeFragment.calorieDisplay.setTextColor(Color.parseColor("#FF0000"));
-                    HomeFragment.caloriesLeftMessage.setText("calories over today");
-                }
-                else{
-                    TextPaint paint = HomeFragment.calorieDisplay.getPaint();
-                    float width = paint.measureText(HomeFragment.calorieDisplay.getText().toString());
-                    Shader textShader = new LinearGradient(0, 0, width, HomeFragment.calorieDisplay.getTextSize(),
-                            new int[]{
-                                    Color.parseColor("#3DBDB0"),
-                                    Color.parseColor("#04B5CE"),
-                            }, null, Shader.TileMode.CLAMP);
-                    HomeFragment.calorieDisplay.getPaint().setShader(textShader);
-                    HomeFragment.calorieDisplay.setTextColor(Color.parseColor("#3DBDB0"));
-                    HomeFragment.caloriesLeftMessage.setText("calories left today");
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
-            }
-        });
     }
 
     public void onClick(View v) {

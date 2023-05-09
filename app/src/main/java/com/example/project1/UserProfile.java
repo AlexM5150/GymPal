@@ -1,11 +1,16 @@
 package com.example.project1;
 
+
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
+
+
 
 // This class is used to keep a recording of all data and use it to send
-public class UserProfile {
+public class UserProfile implements Serializable {
 
+    public String userID;
     public String displayName;
     public String feetNum;
     public String inchNum;
@@ -32,9 +37,14 @@ public class UserProfile {
     public UserProfile(){}
 
     // Constructor method for all values of UserProfile
-    public UserProfile(String displayName, String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String bio, String location, String profilePic,
+
+
+
+    public UserProfile(String userID, String displayName, String feetNum, String inchNum, String curWeight, String gWeight, String aLevel, String gender, String style, String caloriesLeft, String age, String bio, String location, String profilePic,
                        String currentFoodName, String currentFoodCalories, String currentBrandName, String prevCalories, String squatNum, String benchNum, String deadliftNum, List<String> goalList){
 
+
+        this.userID = userID;
         this.displayName = displayName;
 
         this.feetNum = feetNum;
@@ -60,6 +70,10 @@ public class UserProfile {
     }
 
     // Below is all of the get and set methods, created if needed
+    public String getUserID(){return userID;}
+
+    public void setUserID(String userID){this.userID = userID;}
+
     public String getDisplayName(){return displayName;}
 
     public void setDisplayName(String displayName){this.displayName = displayName;}

@@ -61,6 +61,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     String foodName;
     String foodBrand;
     List<String> goalList;
+    String userID;
     int caloriesLeftNum;
     double height;
     double kgWeight;
@@ -75,6 +76,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
         setContentView(R.layout.activity_user_info);
         FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
         displayName = user.getDisplayName();
+        userID = user.getUid();
 
         feet = findViewById(R.id.feet);
         inches = findViewById(R.id.inches);
@@ -219,7 +221,7 @@ public class UserInfo extends AppCompatActivity implements AdapterView.OnItemSel
     private void sendUserData() {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
-        UserProfile userProfile = new UserProfile(displayName, feetNum, inchNum, curWeight, gWeight ,aLevel,
+        UserProfile userProfile = new UserProfile(userID, displayName, feetNum, inchNum, curWeight, gWeight ,aLevel,
                 gender, style, caloriesLeft, userAge, userBio, userLocation, profilePic, foodName, calories, foodBrand, prevCalories, "", "", "", goalList);
 
         myRef.setValue(userProfile);

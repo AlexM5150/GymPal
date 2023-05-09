@@ -101,7 +101,7 @@ public class FoodFragment extends Fragment {
             super.onPreExecute();
             pDialog = ProgressDialog.show(getActivity(), "Searching", "Finding your calories");
         }
-
+        //parsing api endpoint
         @Override
         protected Void doInBackground(Void... voids) {
             HttpHandler sh = new HttpHandler();
@@ -216,9 +216,6 @@ public class FoodFragment extends Fragment {
                     calories = nf_calories.get(position);
                     navigation.putExtra("displayName", user.getDisplayName());
                     startActivity(navigation);
-//                    Intent intent = new Intent(getActivity().getApplicationContext(), HomeFragment.class);
-//                    intent.putExtra("FROM_ACTIVITY", "TEST");
-//                    startActivity(intent);
                 }
             });
 
