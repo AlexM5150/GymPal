@@ -42,6 +42,30 @@
         tools:layout="@layout/fragment_stats" />
 
     <fragment
+        android:id="@+id/drawer_water"
+        android:name="com.example.project1.ui.water.WaterFragment"
+        android:label="Water Intake Tracker"
+        tools:layout="@layout/fragment_water" />
+
+    <fragment
+        android:id="@+id/drawer_contact"
+        android:name="com.example.project1.ui.contact.GroupChat"
+        android:label="Gym Chat"
+        tools:layout="@layout/fragment_chat_room" />
+
+    <fragment
+        android:id="@+id/drawer_exercises"
+        android:name="com.example.project1.ui.exercises.exerciseFragment"
+        android:label="@string/menu_exercise"
+        tools:layout="@layout/fragment_exercise" />
+
+    <fragment
+        android:id="@+id/drawer_goals"
+        android:name="com.example.project1.ui.goals.GoalsFragment"
+        android:label="@string/menu_goals"
+        tools:layout="@layout/fragment_goals" />
+
+    <fragment
         android:id="@+id/drawer_food"
         android:name="com.example.project1.ui.food.FoodFragment"
         android:label="@string/menu_food">
